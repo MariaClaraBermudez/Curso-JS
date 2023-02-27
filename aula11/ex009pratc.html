@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando condições</title>
+    <style>
+       body{
+        background-color: rgb(230, 133, 162);
+        color:rgb(255, 255, 255)
+       }
+       
+    </style>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    Nacionalidade : <input type="string" name="txtvel" id="txtvel"> <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+
+      function Verificar(){
+        var txtv = window.document.querySelector('input#txtvel') 
+        var res = window.document.querySelector('div#res')
+        var vel = String(txtv.value)
+        res.innerHTML = `<p>Sua nacionalidade é <strong>${vel}</strong></p>`      
+        if (Brasileiro){
+         res.innerHTML += `<p>Voce é <strong>ESTRANGEIRO!</strong> </p>`    
+        }
+        res.innerHTML += `<p> Bem vindo !</p> `                      
+      }
+
+    </script>
+</body>
+</html>
